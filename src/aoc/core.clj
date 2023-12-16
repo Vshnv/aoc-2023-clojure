@@ -1,8 +1,9 @@
 (ns aoc.core
   (:gen-class)
-  (:require aoc.day1))
+  (:require aoc.day1)
+  (:require aoc.day2))
 
 
 (defn -main
   [& args]
-  (println (aoc.day1/day1Part2)))
+  (println (aoc.day2/day2Part2)))

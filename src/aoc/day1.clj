@@ -11,14 +11,10 @@
             (map #(str (first %) (last %)))
             (map #(Integer/parseInt %))
             (reduce +)
-        )))  
+        )))
 )
 
-
-
-
-(defn day1Part2 []
-    (defn parseToken [tok]
+(defn parseToken [tok]
     (case tok
         "one" "1"
         "two" "2"
@@ -32,6 +28,9 @@
         tok
     )
 )
+
+
+(defn day1Part2 []
     (aoc.challenge/challenge 1 (fn [input] (->> 
             (clojure.string/split-lines input)
             (map #(map (fn [e] (parseToken (last e))) (re-seq #"(?=(one|two|three|four|five|six|seven|eight|nine|\d))" %)))
